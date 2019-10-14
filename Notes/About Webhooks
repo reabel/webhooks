@@ -20,3 +20,11 @@ Travis CI uses github webhook events to trigger builds. Github previously did th
 	 trigger a deployment
 
 -Event server vs. Listening server
+
+-Discord Returns a 204 success code to github upon send (204 = No content)
+- alternatively might be 202 (accepted)
+
+
+Github secret, use:
+
+ruby -rsecurerandom -e 'puts SecureRandom.hex(20)'
