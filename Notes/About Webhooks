@@ -15,5 +15,8 @@ Travis CI uses github webhook events to trigger builds. Github previously did th
 
 
 -Webhook events can be forwarded
+	-example. Git can push a commit even to then be built by travis.
+	-once travis passes the build it can pass an event to somewhere else to
+	 trigger a deployment
 
 -Event server vs. Listening server
