@@ -15,3 +15,5 @@ Travis CI uses github webhook events to trigger builds. Github previously did th
 
 
 -Webhook events can be forwarded
+
+-Event server vs. Listening server
