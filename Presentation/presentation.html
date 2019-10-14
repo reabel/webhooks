@@ -1782,19 +1782,36 @@ based on dark.css by Ivan Sagalaev
         <section>
     <!-- WIP, based off MySql presentation -->
 <h1 id="webhooks">Webhooks</h1>
-<h2 id="ok-">Ok.</h2>
+<h2 id="aka-web-callback-or-http-push-api">AKA Web Callback or HTTP Push API</h2>
 <!-- test comment-->
   </section>
   <section>
     <h1 id="regular-api-calls-vs-webhooks">Regular API Calls vs Webhooks</h1>
+<ul>
+<li>Webhooks are more of a style than a specification</li>
+<li>Think REST vs SOAP</li>
+</ul>
 
   </section>
   <section>
     <h3 id="api-calls">Api Calls</h3>
+<ul>
+<li>Wait for a response typically</li>
+<li>response is usually formatted in some manner, following a defined spec</li>
+<li>processed data is sent in the response to the initial call</li>
+</ul>
 
   </section>
   <section>
     <h3 id="webhooks">Webhooks</h3>
+<ul>
+<li>Typically triggered by an call, posted to a defined url</li>
+<li>Any processed data would be sent via a separate call typically</li>
+<li>Common Terms:<ul>
+<li>Event, Listener / Consumer, Fufilment, Payload</li>
+</ul>
+</li>
+</ul>
 
   </section>
   <section>
@@ -1811,6 +1828,13 @@ based on dark.css by Ivan Sagalaev
   </section>
   <section>
     <h3 id="paypal">Paypal</h3>
+<ul>
+<li>Used by Paypal for event notification</li>
+</ul>
+
+  </section>
+  <section>
+    <h3 id="travis-ci-github">Travis CI / Github</h3>
 
   </section>
   <section>
@@ -1822,6 +1846,10 @@ based on dark.css by Ivan Sagalaev
 <ul>
 <li><a href="https://dev.to/_bigblind/comment/11oo">ELI5</a> of webhooks</li>
 <li>presentation created in <a href="https://www.npmjs.com/package/cleaver">cleaver</a></li>
+<li><a href="https://dev.to/oktadev/webhooks-vs-serverless-1end">???</a></li>
+<li><a href="https://developer.paypal.com/docs/integration/direct/webhooks/#overview">Paypal&#39;s</a> description of their webhooks</li>
+<li><a href="https://developer.github.com/webhooks/">Github&#39;s</a> setup of Webhook consumers</li>
+<li><a href="https://docs.travis-ci.com/user/notifications/#configuring-webhook-notifications">Travis-CI&#39;s</a> configuration for notifications</li>
 </ul>
 
   </section>
