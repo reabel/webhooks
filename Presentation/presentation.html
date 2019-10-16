@@ -1786,7 +1786,7 @@ based on dark.css by Ivan Sagalaev
 <!-- test comment-->
   </section>
   <section>
-    <h1 id="regular-api-calls-vs-webhooks">Regular API Calls vs Webhooks</h1>
+    <h2 id="regular-api-calls-vs-webhooks">Regular API Calls vs Webhooks</h2>
 <ul>
 <li>Webhooks are more of a style than a specification</li>
 <li>Think REST vs SOAP</li>
@@ -1795,7 +1795,11 @@ based on dark.css by Ivan Sagalaev
   </section>
   <section>
     <h3 id="api-calls">Api Calls</h3>
-<ul>
+<p><img src="images/Webhook-api.gif" alt="api-call-diagram"></p>
+
+  </section>
+  <section>
+    <ul>
 <li>Wait for a response typically</li>
 <li>response is usually formatted in some manner, following a defined spec</li>
 <li>processed data is sent in the response to the initial call</li>
@@ -1808,10 +1812,28 @@ based on dark.css by Ivan Sagalaev
 <li>Typically triggered by an call, posted to a defined url</li>
 <li>Any processed data would be sent via a separate call typically</li>
 <li>Common Terms:<ul>
-<li>Event, Listener / Consumer, Fufilment, Payload</li>
+<li>Event</li>
+<li>Listener / Consumer</li>
+<li>Payload</li>
 </ul>
 </li>
+<li>Usually &quot;Subscribed&quot; to (one time setup) by the end user (ie repo owner on github points their webhook API to an app), as opposed to requesting information via GET</li>
 </ul>
+
+  </section>
+  <section>
+    <h2 id="single-webhooks">Single Webhooks</h2>
+<p><img src="images/Webhook-single.gif" alt="webhooks-single-diagram"></p>
+
+  </section>
+  <section>
+    <h2 id="multiple-webhooks">Multiple Webhooks</h2>
+<p><img src="images/Webhook-multi.gif" alt="webhooks-multiple-diagram"></p>
+
+  </section>
+  <section>
+    <h2 id="passing-through-webhooks">Passing Through Webhooks</h2>
+<p><img src="images/Webhook-passthru.gif" alt="webhooks-multiple-diagram"></p>
 
   </section>
   <section>
@@ -1824,21 +1846,36 @@ based on dark.css by Ivan Sagalaev
   </section>
   <section>
     <h3 id="discord-slack-integrations">Discord / Slack integrations</h3>
+<ul>
+<li>Admins can configure webhooks to post notifications to servers or channels
+<img src="images/discord.jpg" alt="discord"></li>
+</ul>
 
   </section>
   <section>
     <h3 id="paypal">Paypal</h3>
 <ul>
-<li>Used by Paypal for event notification</li>
+<li>Used by Paypal for event notification, full API available</li>
 </ul>
 
   </section>
   <section>
     <h3 id="travis-ci-github">Travis CI / Github</h3>
+<ul>
+<li><p>Github has an api available that you can use to receive commit data from repositories where configured</p>
+</li>
+<li><p>Travis CI uses webhooks from github to trigger builds</p>
+</li>
+</ul>
 
   </section>
   <section>
     <h3 id="others">Others</h3>
+<ul>
+<li><a href="https://developer.atlassian.com/bitbucket/api/2/reference/resource/hook_events">Bitbucket</a></li>
+<li><a href="https://developers.facebook.com/docs/instagram-api/guides/webhooks">Instagram</a></li>
+<li><a href="https://help.shopify.com/en/api/getting-started/webhooks">Shopify</a></li>
+</ul>
 
   </section>
   <section>
@@ -1846,7 +1883,7 @@ based on dark.css by Ivan Sagalaev
 <ul>
 <li><a href="https://dev.to/_bigblind/comment/11oo">ELI5</a> of webhooks</li>
 <li>presentation created in <a href="https://www.npmjs.com/package/cleaver">cleaver</a></li>
-<li><a href="https://dev.to/oktadev/webhooks-vs-serverless-1end">???</a></li>
+<li><a href="https://dev.to/oktadev/webhooks-vs-serverless-1end">Webhooks vs serverless</a></li>
 <li><a href="https://developer.paypal.com/docs/integration/direct/webhooks/#overview">Paypal&#39;s</a> description of their webhooks</li>
 <li><a href="https://developer.github.com/webhooks/">Github&#39;s</a> setup of Webhook consumers</li>
 <li><a href="https://docs.travis-ci.com/user/notifications/#configuring-webhook-notifications">Travis-CI&#39;s</a> configuration for notifications</li>
