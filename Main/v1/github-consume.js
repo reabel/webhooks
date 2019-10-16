@@ -39,15 +39,31 @@ function processRespFirst(res){
 function postRespProcess(req){
 	console.log('waiting 10 seconds pretending like we\'re doing stuff');
 	//body not showing up for some reason
-	setTimeout(function(){ console.log('Request:', req);
+	setTimeout(function(){ console.log('Request:', req.body);
 	 }, 10000);
 }
+
+function processRespSecond(req, res){
+	console.log('waiting 5 seconds pretending like we\'re doing stuff');
+	//body not showing up for some reason
+	setTimeout(function(){ 
+		console.log('Request:', req.body);
+		res.status(200);
+		res.json({someProp: 'test'});
+
+	 }, 5000);
+}
 app.use(express.json());
+
 app.post('/payload', (req, res) => {
+	/*webhook style*/
 	processRespFirst(res);
 	postRespProcess(req);
-	//
-	//res.send('');
+});
+
+app.post('/payload-api', (req, res) => {
+	/*api style*/
+	processRespSecond(req, res); 
 });
 
 
